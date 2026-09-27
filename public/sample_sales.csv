@@ -1,0 +1,51 @@
+product_name,category,branch,price,quantity_sold,date,customer_id
+iPhone 15 Pro,Electronics,Mumbai - Andheri,134900,3,2025-01-15,CUST001
+Samsung Galaxy S24,Electronics,Delhi - CP,79999,5,2025-01-15,CUST002
+Levi's 501 Jeans,Fashion,Bangalore - MG Road,3499,8,2025-01-15,CUST003
+Nike Air Max 90,Fashion,Chennai - T Nagar,12995,4,2025-01-15,CUST004
+Organic Ghee 1L,Groceries,Mumbai - Andheri,650,25,2025-01-15,CUST005
+Ray-Ban Aviator,Eyewear,Hyderabad - Banjara,8500,6,2025-01-15,CUST006
+MacBook Air M3,Electronics,Pune - FC Road,114900,2,2025-01-15,CUST007
+Titan Watch Classic,Accessories,Kolkata - Park St,4999,7,2025-01-15,CUST008
+Dove Shampoo 400ml,Beauty,Mumbai - Andheri,425,30,2025-01-16,CUST009
+Tata Salt 1kg,Groceries,Delhi - CP,28,50,2025-01-16,CUST010
+iPhone 15 Pro,Electronics,Bangalore - MG Road,134900,4,2025-01-16,CUST011
+Zara Formal Shirt,Fashion,Mumbai - Andheri,2999,12,2025-01-16,CUST012
+Samsung Galaxy S24,Electronics,Chennai - T Nagar,79999,3,2025-01-16,CUST013
+Nike Air Max 90,Fashion,Delhi - CP,12995,6,2025-01-16,CUST014
+Lenskart Frame Blue,Eyewear,Mumbai - Andheri,2500,9,2025-01-16,CUST015
+Amul Butter 500g,Groceries,Pune - FC Road,270,35,2025-01-17,CUST016
+iPhone 15 Pro,Electronics,Delhi - CP,134900,5,2025-01-17,CUST017
+MacBook Air M3,Electronics,Mumbai - Andheri,114900,3,2025-01-17,CUST018
+Levi's 501 Jeans,Fashion,Hyderabad - Banjara,3499,10,2025-01-17,CUST019
+Ray-Ban Aviator,Eyewear,Bangalore - MG Road,8500,4,2025-01-17,CUST020
+Titan Watch Classic,Accessories,Mumbai - Andheri,4999,8,2025-01-17,CUST021
+Samsung Galaxy S24,Electronics,Mumbai - Andheri,79999,7,2025-01-18,CUST022
+Zara Formal Shirt,Fashion,Delhi - CP,2999,15,2025-01-18,CUST023
+Organic Ghee 1L,Groceries,Bangalore - MG Road,650,20,2025-01-18,CUST024
+Lakme Foundation,Beauty,Chennai - T Nagar,899,12,2025-01-18,CUST025
+Nike Air Max 90,Fashion,Pune - FC Road,12995,5,2025-01-18,CUST026
+Lenskart Frame Blue,Eyewear,Mumbai - Andheri,2500,11,2025-01-18,CUST027
+Tata Salt 1kg,Groceries,Kolkata - Park St,28,60,2025-01-19,CUST028
+iPhone 15 Pro,Electronics,Hyderabad - Banjara,134900,2,2025-01-19,CUST029
+MacBook Air M3,Electronics,Delhi - CP,114900,4,2025-01-19,CUST030
+Levi's 501 Jeans,Fashion,Mumbai - Andheri,3499,14,2025-01-19,CUST031
+Dove Shampoo 400ml,Beauty,Bangalore - MG Road,425,22,2025-01-19,CUST032
+Ray-Ban Aviator,Eyewear,Delhi - CP,8500,5,2025-01-19,CUST033
+Samsung Galaxy S24,Electronics,Bangalore - MG Road,79999,6,2025-01-20,CUST034
+Zara Formal Shirt,Fashion,Chennai - T Nagar,2999,9,2025-01-20,CUST035
+Organic Ghee 1L,Groceries,Mumbai - Andheri,650,30,2025-01-20,CUST036
+Nike Air Max 90,Fashion,Mumbai - Andheri,12995,7,2025-01-20,CUST037
+Titan Watch Classic,Accessories,Delhi - CP,4999,6,2025-01-20,CUST038
+Amul Butter 500g,Groceries,Hyderabad - Banjara,270,40,2025-01-20,CUST039
+iPhone 15 Pro,Electronics,Mumbai - Andheri,134900,6,2025-01-21,CUST040
+MacBook Air M3,Electronics,Bangalore - MG Road,114900,3,2025-01-21,CUST041
+Levi's 501 Jeans,Fashion,Delhi - CP,3499,11,2025-01-21,CUST042
+Samsung Galaxy S24,Electronics,Pune - FC Road,79999,4,2025-01-21,CUST043
+Lakme Foundation,Beauty,Mumbai - Andheri,899,15,2025-01-21,CUST044
+Lenskart Frame Blue,Eyewear,Bangalore - MG Road,2500,8,2025-01-21,CUST045
+Tata Salt 1kg,Groceries,Delhi - CP,28,55,2025-01-22,CUST046
+Nike Air Max 90,Fashion,Kolkata - Park St,12995,3,2025-01-22,CUST047
+Ray-Ban Aviator,Eyewear,Mumbai - Andheri,8500,7,2025-01-22,CUST048
+iPhone 15 Pro,Electronics,Chennai - T Nagar,134900,4,2025-01-22,CUST049
+Zara Formal Shirt,Fashion,Hyderabad - Banjara,2999,10,2025-01-22,CUST050

@@ -1,0 +1,248 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --glass-bg: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+    --gradient-accent: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+    --gradient-warm: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+    --gradient-cool: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+    --gradient-mesh: radial-gradient(at 40% 20%, #6366f1 0px, transparent 50%),
+                     radial-gradient(at 80% 0%, #a855f7 0px, transparent 50%),
+                     radial-gradient(at 0% 50%, #10b981 0px, transparent 50%);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary-500/30 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary-500/50;
+  }
+}
+
+@layer components {
+  /* Glassmorphism */
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  }
+
+  .glass-light {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+  }
+
+  .dark .glass-card {
+    @apply glass;
+  }
+
+  .glass-card {
+    @apply glass-light;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  /* Animated border */
+  .animated-border {
+    position: relative;
+    overflow: hidden;
+  }
+  .animated-border::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: conic-gradient(from 0deg, #6366f1, #a855f7, #10b981, #6366f1);
+    border-radius: inherit;
+    animation: rotateBorder 4s linear infinite;
+    z-index: -1;
+  }
+  .animated-border::after {
+    content: '';
+    position: absolute;
+    inset: 1px;
+    background: inherit;
+    border-radius: inherit;
+    z-index: -1;
+  }
+
+  @keyframes rotateBorder {
+    to { transform: rotate(360deg); }
+  }
+
+  /* Metric card hover */
+  .metric-card {
+    @apply glass-card rounded-2xl p-6 transition-all duration-300;
+  }
+  .metric-card:hover {
+    @apply -translate-y-1;
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
+  }
+
+  /* Chart container */
+  .chart-container {
+    @apply glass-card rounded-2xl p-6 transition-all duration-300;
+  }
+
+  /* Sidebar styles */
+  .sidebar-item {
+    @apply flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 cursor-pointer;
+  }
+  .sidebar-item:hover {
+    @apply bg-primary-500/10;
+  }
+  .sidebar-item.active {
+    @apply bg-gradient-to-r from-primary-500/20 to-primary-600/10 text-primary-400;
+  }
+
+  /* Shimmer loading */
+  .shimmer {
+    background: linear-gradient(90deg, transparent 25%, rgba(255,255,255,0.1) 50%, transparent 75%);
+    background-size: 200% 100%;
+    animation: shimmer 2s linear infinite;
+  }
+
+  /* Stat number animation */
+  .stat-value {
+    @apply text-3xl font-bold font-display tracking-tight;
+  }
+
+  /* Glow effects */
+  .glow-primary {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3), 0 0 60px rgba(99, 102, 241, 0.1);
+  }
+  .glow-accent {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.3), 0 0 60px rgba(16, 185, 129, 0.1);
+  }
+  .glow-warm {
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.3), 0 0 60px rgba(245, 158, 11, 0.1);
+  }
+
+  /* Page transition */
+  .page-enter {
+    @apply animate-fade-in;
+  }
+
+  /* Badge */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  .badge-success {
+    @apply badge bg-emerald-500/20 text-emerald-400;
+  }
+  .badge-warning {
+    @apply badge bg-amber-500/20 text-amber-400;
+  }
+  .badge-danger {
+    @apply badge bg-red-500/20 text-red-400;
+  }
+  .badge-info {
+    @apply badge bg-blue-500/20 text-blue-400;
+  }
+
+  /* Data table */
+  .data-table {
+    @apply w-full text-sm;
+  }
+  .data-table thead {
+    @apply border-b border-white/10;
+  }
+  .data-table th {
+    @apply text-left py-3 px-4 font-medium text-slate-400 uppercase tracking-wider text-xs;
+  }
+  .data-table td {
+    @apply py-3 px-4 border-b border-white/5;
+  }
+  .data-table tbody tr {
+    @apply transition-colors hover:bg-white/5;
+  }
+
+  /* ─── Onboarding Tutorial ─── */
+  .onboarding-card {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow:
+      0 24px 80px rgba(0, 0, 0, 0.5),
+      0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+      0 1px 0 rgba(255, 255, 255, 0.05) inset;
+  }
+
+  .onboarding-feature-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: all 0.2s ease;
+  }
+  .onboarding-feature-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .onboarding-highlight-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.2s ease;
+  }
+  .onboarding-highlight-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  /* ─── AI Assistant Panel ─── */
+  .ai-assistant-panel {
+    background: rgba(15, 23, 42, 0.92);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow:
+      0 24px 60px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+  }
+
+  /* ─── Dashboard Section Nav ─── */
+  .dashboard-section-nav {
+    position: sticky;
+    top: 64px;
+    z-index: 20;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
